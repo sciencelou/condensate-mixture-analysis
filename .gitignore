@@ -1,0 +1,11 @@
+# raw data and generated results are not part of the repository
+images/**/*.tif
+images/**/*.tiff
+*.lif
+results/
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+.DS_Store
+~$*

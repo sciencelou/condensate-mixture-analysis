@@ -1,0 +1,23 @@
+# ============================================================
+#  Analysis settings. Text after "#" is ignored.
+# ============================================================
+
+# 1) Protein shown in each colour (only used for colour-coded exports; raw images use section 4)
+green   = ACAN
+red     = BCAN
+magenta = NCAN
+
+# 2) Pixel size in µm. Leave empty to report areas in pixels.
+pixel_um = 0.057
+
+# 3) Detector dark level (offset) of the raw images, if measured from a blank image acquired with the
+#    same settings. Empty = 0. Affects intensity ratios only, not segmentation.
+detector_offset =
+
+# 4) Protein in each channel of the raw single-channel TIFFs exported from Fiji/Bio-Formats
+#    (file names "<name>.lif - SeriesNNN ... - C=<n>.tif").
+#    Format:  channels <.lif file name without .lif> = protein in C=0, protein in C=1, ...
+channels ACAN FL 6% = ACAN
+channels BCAN-ACAN FL 6% PEG = BCAN, ACAN
+channels NCAN-ACAN FL 6% = ACAN, NCAN
+channels BCAN-NCAN-ACAN FL 6% PEG = BCAN, ACAN, NCAN
